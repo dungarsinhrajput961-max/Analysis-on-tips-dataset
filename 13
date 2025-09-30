@@ -1,0 +1,9 @@
+# Use Group by function 
+plt.figure(figsize=(8,6))
+total_bill_by_day_gender = tips.groupby(['day','sex'])['total_bill'].sum().reset_index()
+
+sns.barplot(x='day',y='total_bill',hue='sex',
+            data=total_bill_by_day_gender,
+            palette='coolwarm',edgecolor='black')
+plt.title("Total Bill Amount by Day and Gender")
+plt.show();
