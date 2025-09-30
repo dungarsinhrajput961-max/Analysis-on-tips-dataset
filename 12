@@ -1,0 +1,6 @@
+# Create Pivot Table 
+pivot_tip = tips.pivot_table(index='day',columns ='time',values ='total_bill')
+
+sns.heatmap(pivot_tip,cmap='coolwarm',annot=True,fmt='.2f')
+plt.title('Total Bill Amount by Day and time')
+plt.show();
