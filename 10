@@ -1,0 +1,10 @@
+# Group data by day and calculate average tip amount
+avg_tip_by_day = tips.groupby('day')['tip'].mean().reset_index()
+# Sort the DataFrame by day
+avg_tip_by_day = avg_tip_by_day.sort_values(by='day')
+
+
+sns.barplot(x=avg_tip_by_day['day'],y=avg_tip_by_day['tip'],color='lightgreen',edgecolor='green')
+plt.title('Total Tip amount by day')
+
+plt.show();
