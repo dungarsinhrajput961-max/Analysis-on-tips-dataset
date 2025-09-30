@@ -1,0 +1,9 @@
+# Smoker Counts
+smoker_counts = tips['smoker'].value_counts()
+
+plt.figure(figsize=(8,6))
+plt.pie(smoker_counts,labels=smoker_counts.index,autopct= '%1.1f%%',colors=['skyblue','lightcoral'],wedgeprops={'edgecolor':'black'})
+plt.title('"Smoker v/s Non-Smoker Customers"')
+plt.axis('on')
+
+plt.show();
